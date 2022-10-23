@@ -274,7 +274,8 @@ section {
    fill: currentColor;
 }
 
-.features-icon:hover {
+.features-icon:hover, 
+.features-icon:focus {
    stroke: var(--accent-color);
 }
 
@@ -463,7 +464,8 @@ section {
 
 }
 
-.clients-link:hover {
+.clients-link:hover, 
+.clients-link:focus {
    fill: var(--accent-color);
    color: var(--accent-color);
    border-color: var(--accent-color);
