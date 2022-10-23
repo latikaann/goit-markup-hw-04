@@ -11,14 +11,18 @@
    --button-focus: #188CE8;
    --adress-color: rgba(255, 255, 255, 0.6);
    --border-color: #EEEEEE;
+   --social-network-color: #AFB1B8;
+   --bg-footer-icon-color: rgba(255, 255, 255, 0.1);
 
    --button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
       0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
+
+   --poftfolio-card-shadow: box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
    
 }
 
-/* General */
+/* ------------------------ General ------------------- */
 
 
 a {
@@ -31,6 +35,7 @@ li {
 
 body {
    font-family: 'Roboto', sans-serif;
+
    color: var(--primary-text-color);
    background-color: var(--white-color);
 }
@@ -71,7 +76,7 @@ section {
    padding-bottom: 94px;
 }
 
-/* Header */
+/* -------------------------- Header --------------------- */
 
 .header-section {
    border-bottom: 1px solid #ECECEC;
@@ -84,7 +89,7 @@ section {
    
 }
 
-/* Logo */
+/* ---------------------- Logo-----------------------*/
 
 .logo, .logo-footer {
    font-family: 'Raleway';
@@ -111,7 +116,7 @@ section {
    color: var(--white-color);
 }
 
-/* Navigation */
+/* ------------------------ Navigation ------------------------*/
 
 .header-list {
    font-weight: 500;
@@ -135,9 +140,10 @@ section {
 
 
 .nav-link {
-   color: var(--title-text-color);
    display: block;
    padding: 32px 0;
+
+   color: var(--title-text-color);
 
 }
 
@@ -152,23 +158,41 @@ section {
 
 
 .nav-contacts {
-   color: var(--primary-text-color);
    display: block;
    padding: 32px 0;
+
+   color: var(--primary-text-color);
    
 }
 
 .nav-contacts:hover, 
-.nav-contacts:focus {
+.nav-contacts:focus,
+.nav-icon:hover,
+.nav-icon:focus{
    color: var(--accent-color);
+   stroke: var(--accent-color);
 }
 
-/* HERO */
+.nav-icon {
+   margin-right: 10px;
+   fill: currentColor;
+
+}
+
+
+/* ------------------------ HERO ------------------------------- */
 
 .hero-section {
-   background-color: var(--dark-bg-color);
-   text-align: center;
    padding: 200px 0;
+
+   text-align: center;
+
+   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-banner.jpg);
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   background-size: 1600px;
+   
+   background-color: var(--dark-bg-color);
 }
 
 .hero-title {
@@ -183,6 +207,7 @@ section {
    line-height: 1.36;
    letter-spacing: 0.06em;
    text-transform: uppercase;
+
    color: var(--white-color);
    
    
@@ -192,16 +217,19 @@ section {
    min-width: 216px;
    padding: 10px 32px;
    cursor: pointer;
+   border-radius: 4px;
+   border: transparent;
+
    font-family: inherit;
    font-weight: 700;
    font-size: 16px;
    line-height: 1.87;
    letter-spacing: 0.06em;
+
    color: var(--white-color);
    background: var(--accent-color);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-   border-radius: 4px;
-   border: transparent;
+   
 }
 
 
@@ -210,7 +238,7 @@ section {
    background: var(--button-focus);
 }
 
-/* < !-- Особливості --> */
+/* < !-------------------- Особливості ----------------------> */
 
 .visually-hidden {
    position: absolute;
@@ -225,11 +253,30 @@ section {
    margin: -1px;
 }
 
+.feature-list-icons {
+   width: 270px;
+   height: 120px;
+   padding: 25px 100px;
+   margin-bottom: 30px;
+   border-radius: 4px;
+
+   background-color: var(--secondary-bg-color);
+}
+
 .features-lists {
    display: flex;
    
 }
 
+.features-icon {
+   width: 70px;
+   height: 70px;
+   fill: currentColor;
+}
+
+.features-icon:hover {
+   stroke: var(--accent-color);
+}
 
 
 .features-title {
@@ -237,12 +284,13 @@ section {
    margin-bottom: 10px;
    width: 270px;
 
-   color: var(--title-text-color);
    font-weight: 700;
    font-size: 14px;
    line-height: 1.14;
    letter-spacing: 0.03em;
    text-transform: uppercase;
+
+   color: var(--title-text-color);
 }
 
 
@@ -259,24 +307,26 @@ section {
    margin-left: 30px;
 }
 
-.work-title, .team-title {
-   color: var(--title-text-color);
+.work-title, 
+.team-title,
+.clients-title {
+   margin-bottom: 50px;
+
    font-weight: 700;
    font-size: 36px;
    line-height: 1.16;
    text-align: center;
    letter-spacing: 0.03em;
+
+   color: var(--title-text-color);
 }
 
-/* Чим ми займаємося */
+/* ---------------------Чим ми займаємося--------------------- */
 
 .work-section {
    padding-top: 0;
 }
 
-.work-title {
-   margin-bottom: 50px;
-}
 
 .work-cards {
    display: flex;
@@ -286,14 +336,17 @@ section {
    margin-right: 30px;
 }
 
-/* Наша команда */
+
+
+/* -------------------------Наша команда--------------------- */
+
+
 
 .team-section {
    background-color: var(--secondary-bg-color);
 }
-.team-title {
-   margin-bottom: 50px;
-}
+
+
 .team-cards {
    display: flex;
    
@@ -301,6 +354,7 @@ section {
 
 .team-card {
    text-align: center;
+
    background-color: var(--white-color);
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
       0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -317,15 +371,17 @@ section {
    
    margin-bottom: 10px;
 
-   color: var(--title-text-color);
    font-weight: 500;
    font-size: 16px;
    line-height: 1.18;
    letter-spacing: 0.03em;
+
+   color: var(--title-text-color);
 }
 
 .team-text {
-   
+   margin-bottom: 16px;
+
    font-size: 16px;
    line-height: 1.18;
    letter-spacing: 0.03em;
@@ -335,41 +391,128 @@ section {
    padding: 30px 0;
 }
 
-/* Футер */
+.network-list {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+
+
+   /* outline: 2px solid tomato; */
+   
+}
+
+.social-network { 
+   width: 20px;
+   height: 20px;
+
+   /* outline: 2px solid blue; */
+}
+
+.network-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 44px;
+   height: 44px;
+   fill: var(--social-network-color);
+   background-color: var(--white-color);
+
+   /* outline: 2px solid green; */
+
+}
+
+
+.network-link:hover,
+.network-link:focus,
+.footer-network-link:hover,
+.footer-network-link:focus {
+   border-radius: 50%;
+   fill: #FFFFFF;
+   background-color: var(--accent-color);
+}
+
+
+/* ---------------------- Постійні клієнти----------------- */
+
+.clients-list {
+   display: flex;
+   justify-content: space-between;
+
+   /* outline: 2px solid tomato; */
+}
+
+.clients-link {
+   
+   display: flex;
+   padding: 16px 32px;
+   width: 170px;
+   height: 92px;
+   
+   border: 1px solid var(--social-network-color);
+   border-radius: 4px;
+
+   color: var(--social-network-color);
+   
+}
+
+.clients-icon {
+   width: 106px;
+   height: 60px;
+
+   fill: currentColor;
+
+}
+
+.clients-link:hover {
+   fill: var(--accent-color);
+   color: var(--accent-color);
+   border-color: var(--accent-color);
+}
+
+
+
+/*------------------- Футер ---------------------------*/
+
+
 
 .footer-section {
    height: 252px;
    padding-top: 60px;
    padding-bottom: 60px;
+
    background-color: var(--dark-bg-color);
 }
 
 
 .adress-link {
-   color: var(--white-color);
    font-style: normal;
    font-size: 14px;
-   line-height: 1.71;      animation: alternate ;
+   line-height: 1.71;     
    letter-spacing: 0.03em;
+
+   color: var(--white-color);
 }
 
-.adress-link:hover, .adress-link:focus {
+.adress-link:hover, 
+.adress-link:focus {
    color: var(--accent-color);
 }
 
 .footer-list {
-   color: var(--adress-color);
    font-style: normal;
    font-size: 14px;
    line-height: 1.71;
    letter-spacing: 0.03em;
+
+   color: var(--adress-color);
 }
 
 .adress-list {
    margin-top: 20px;
 }
 
-.footer-list:hover, .footer-list:focus {
+.footer-list:hover, 
+.footer-list:focus {
    color: var(--accent-color);
 }
 
@@ -378,8 +521,43 @@ section {
    margin-top: 9px;
 }
 
+.networks-text {
+   margin-bottom: 20px;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   
+   color: var(--white-color);
+}
 
-/* Portfolio */
+.footer-network-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   width: 44px;
+   height: 44px;
+   fill: var(--white-color);
+   background-color: var(--bg-footer-icon-color);
+
+}
+
+.footer-blocks {
+   display: flex;
+}
+
+.first-footer-block {
+   margin-right: 70px;
+}
+
+.footer-links {
+   display: flex;
+   gap: 10px;
+}
+
+/* -------------------- Portfolio  ------------------*/
 
 .portfolio-buttons {
    display: flex;
@@ -391,18 +569,21 @@ section {
 .portfolio-button {
    padding: 6px 22px;
    cursor: pointer;
+   border-radius: 4px;
+   border: transparent;
+
    min-width: 73px;
    font-family: inherit;
-   background: var(--secondary-bg-color);
    font-weight: 500;
    font-size: 16px;
    line-height: 1.62;
    text-align: center;
    letter-spacing: 0.03em;
+
+   background: var(--secondary-bg-color);
    color: var(--title-text-color);
    box-shadow: var(--button-shadow);
-   border-radius: 4px;
-   border: transparent;
+   
 }
 
 .portfolio-buttons > .item:not(:first-child) {
@@ -411,14 +592,16 @@ section {
 
 .portfolio-button:hover,
 .portfolio-button:focus {
-   font-family: inherit;
-   background: var(--accent-color);
    border-radius: 4px;
+
+   font-family: inherit;
    font-weight: 500;
    font-size: 16px;
    line-height: 1.62;
    text-align: center;
    letter-spacing: 0.03em;
+
+   background: var(--accent-color);
    color: var(--white-color);
 }
 
@@ -428,6 +611,7 @@ section {
    font-size: 18px;
    line-height: 2;
    letter-spacing: 0.06em;
+
    color: var(--title-text-color);
 }
 
@@ -436,15 +620,19 @@ section {
    font-size: 16px;
    line-height: 1.88;
    letter-spacing: 0.03em;
+
    color: var(--primary-text-color);
 }
 
 
 .pf-card {
    background: var(--white-color);
-
 }
 
+.pf-card:hover,
+.pf-card:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .portfolio-cards {
    display: flex;
@@ -454,6 +642,7 @@ section {
 
 .pf-card-text {
    padding: 20px 24px;
+
    border-right: 1px solid #EEEEEE;
    border-bottom: 1px solid #EEEEEE;
    border-left: 1px solid #EEEEEE;
