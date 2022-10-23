@@ -582,7 +582,7 @@ section {
 
    background: var(--secondary-bg-color);
    color: var(--title-text-color);
-   box-shadow: var(--button-shadow);
+   
    
 }
 
@@ -603,6 +603,7 @@ section {
 
    background: var(--accent-color);
    color: var(--white-color);
+   box-shadow: var(--button-shadow);
 }
 
 .project-title {
