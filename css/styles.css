@@ -519,7 +519,7 @@ section {
 }
 
 
-.footer-adress-list .item + .item {
+.adress-list .item + .item {
    margin-top: 9px;
 }
 
